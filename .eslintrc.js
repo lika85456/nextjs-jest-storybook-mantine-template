@@ -17,6 +17,15 @@ module.exports = {
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
+    'prettier/tabWidth': [
+      'error',
+      {
+        tabWidth: 2,
+      },
+    ],
+
+    "indent": ["error", "tab"],
+
     'react/display-name': 'off',
     'react/jsx-curly-brace-presence': [
       'warn',
