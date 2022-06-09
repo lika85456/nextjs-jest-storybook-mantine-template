@@ -1,0 +1,30 @@
+{
+	"Snapshot test":{
+        "prefix":"snap",
+        "scope":"typescriptreact",
+        "body":[
+            "import { render } from '@testing-library/react';",
+            "import React from 'react';",
+            "import ${TM_FILENAME_BASE/^(.+)(\\.test)$/$1/} from './${TM_FILENAME_BASE/^(.+)(\\.test)$/$1/}';",
+			"",
+			"",
+            "describe('<${TM_FILENAME_BASE/^(.+)(\\.test)$/$1/}>', () => {",
+            "",
+            "beforeEach(() => {",
+            "    cleanup();",
+            "    jest.clearAllMocks();",
+            "});            ",
+            "",
+            "    it('snapshots', async () => {",
+            "        const rendered = render(",
+            "            <${TM_FILENAME_BASE/^(.+)(\\.test)$/$1/}",
+            "                ",
+            "            />",
+            "        );",
+			"",
+            "        expect(rendered).toMatchSnapshot();",
+            "    });",
+            "});",            
+        ]
+    }
+}
